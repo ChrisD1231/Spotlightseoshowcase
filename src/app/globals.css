@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-primary: #f6eb14; /* Exact Yellow requested */
+  --color-brand-bg-light: #ffffff;
+  --color-brand-bg-dark: #000000;
+  --color-brand-surface-light: #f8f9fa;
+  --color-brand-surface-dark: #111111;
+  --color-brand-border-light: #e5e7eb;
+  --color-brand-border-dark: #333333;
+  --color-brand-text-light: #000000;
+  --color-brand-text-dark: #ffffff;
+  --color-brand-muted-light: #666666;
+  --color-brand-muted-dark: #999999;
+  --color-brand-accent: #000000;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-poppins);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  :root {
+    --background: var(--color-brand-bg-light);
+    --foreground: var(--color-brand-text-light);
+    --surface: var(--color-brand-surface-light);
+    --border: var(--color-brand-border-light);
+    --muted: var(--color-brand-muted-light);
+  }
+  
+  .dark {
+    --background: var(--color-brand-bg-dark);
+    --foreground: var(--color-brand-text-dark);
+    --surface: var(--color-brand-surface-dark);
+    --border: var(--color-brand-border-dark);
+    --muted: var(--color-brand-muted-dark);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-white/20 dark:border-slate-700/50 shadow-sm;
+  }
+  .glass-card {
+    @apply bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700;
+  }
+}
