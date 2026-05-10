@@ -12,7 +12,7 @@ This platform serves as a powerful tool for marketing agencies and business owne
 
 The landing page features a premium design that adheres to the Spotlight Media brand identity. It uses a high contrast color palette of yellow and black to ensure professional readability and brand consistency.
 
-![Landing Page](public/landing.png)
+![Landing Page](public/landing_v2.png)
 
 ### Interactive Audit Dashboard
 
